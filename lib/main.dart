@@ -1,9 +1,9 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_maps/constnats/app_routers_names.dart';
 
 import 'app_router.dart';
-import 'constnats/strings.dart';
 
 late String initialRoute;
 

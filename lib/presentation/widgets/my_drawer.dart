@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_maps/business_logic/cubit/phone_auth/phone_auth_cubit.dart';
+import 'package:flutter_maps/constnats/app_routers_names.dart';
 import 'package:flutter_maps/constnats/my_colors.dart';
-import 'package:flutter_maps/constnats/strings.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -72,8 +72,11 @@ class MyDrawer extends StatelessWidget {
     );
   }
 
+
   void _launchURL(String url) async {
-    await canLaunch(url) ? await launch(url) : throw 'Could not launch $url';
+    if (!await launchUrl(Uri.parse(url))) {
+      throw 'Could not launch ${Uri.parse(url)}';
+    }
   }
 
   Widget buildIcon(IconData icon, String url) {
@@ -94,21 +97,21 @@ class MyDrawer extends StatelessWidget {
         children: [
           buildIcon(
             FontAwesomeIcons.facebook,
-            'https://www.facebook.com/groups/omarahmedx14',
+            'https://www.facebook.com/oessam20/',
           ),
           const SizedBox(
             width: 15,
           ),
           buildIcon(
             FontAwesomeIcons.youtube,
-            'https://www.youtube.com/c/OmarAhmedx14/videos',
+            'https://www.youtube.com/channel/UC47dFB22rLizN4R65lyFrSA',
           ),
           const SizedBox(
             width: 20,
           ),
           buildIcon(
-            FontAwesomeIcons.telegram,
-            'https://t.me/OmarX14',
+            FontAwesomeIcons.whatsapp,
+            'https://wa.me/201147881089',
           ),
         ],
       ),

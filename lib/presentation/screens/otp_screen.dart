@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_maps/business_logic/cubit/phone_auth/phone_auth_cubit.dart';
+import 'package:flutter_maps/constnats/app_routers_names.dart';
 import 'package:flutter_maps/constnats/my_colors.dart';
-import 'package:flutter_maps/constnats/strings.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 
 // ignore: must_be_immutable
